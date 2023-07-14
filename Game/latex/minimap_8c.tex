@@ -1,0 +1,203 @@
+\hypertarget{minimap_8c}{}\section{minimap.\+c File Reference}
+\label{minimap_8c}\index{minimap.\+c@{minimap.\+c}}
+
+
+Testing Program.  
+
+
+{\ttfamily \#include \char`\"{}minimap.\+h\char`\"{}}\newline
+Include dependency graph for minimap.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{minimap_8c_a08368eea25194e149a4715e69a2766bf}{initminimap} (\hyperlink{structminimap}{minimap} $\ast$m)
+\begin{DoxyCompactList}\small\item\em To initialize the minimap m . \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_a77aa7e86d57acad18282831dfcfe6a17}{M\+A\+J\+Minimap} (S\+D\+L\+\_\+\+Rect pos\+Joueur, \hyperlink{structminimap}{minimap} $\ast$m, S\+D\+L\+\_\+\+Rect camera, int redimensionnement)
+\begin{DoxyCompactList}\small\item\em To synchronize the movement of the player to the minimap icon. \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_a4e4834c816a2f591ef20dc58e7a3b45b}{afficher} (\hyperlink{structminimap}{minimap} m, S\+D\+L\+\_\+\+Surface $\ast$s)
+\begin{DoxyCompactList}\small\item\em To show the minimap on the screen  m the minimap  s the surface. \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_a1ebba30f85166270f80b1f29456addc1}{Liberer} (\hyperlink{structminimap}{minimap} $\ast$m)
+\begin{DoxyCompactList}\small\item\em To liberate the minimap once we close the game  m the minimap. \end{DoxyCompactList}\item 
+int \hyperlink{minimap_8c_a560674ed1aa4fbd8200cdd466f8be3fd}{time\+Game} (S\+D\+L\+\_\+\+Surface $\ast$s, \hyperlink{structtext}{text} te, int t0)
+\begin{DoxyCompactList}\small\item\em To calculate the time of each round  s The screen  te The text of the time  t0 The time initial of every new round. \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_afa663e55163db2a2347b310b8471ab96}{time\+Enigme} (S\+D\+L\+\_\+\+Surface $\ast$s)
+\item 
+void \hyperlink{minimap_8c_a3a314308c9bbdc8aaf2e8166983028c5}{Handle\+Input} (S\+D\+L\+\_\+\+Event e, \hyperlink{structtext}{text} $\ast$str, int $\ast$p, \hyperlink{structtext}{text} $\ast$fstr)
+\begin{DoxyCompactList}\small\item\em To type the name of the player before the game  e The event  str The variable that contains the player\textquotesingle{}s name in window mod  p The mod of game (Play, Settings etc..)  fstr The variable that containts the player\textquotesingle{}s name in full screen. \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_af88b7e280acd64400d16b53053f054c2}{show\+Input} (\hyperlink{structtext}{text} str, S\+D\+L\+\_\+\+Surface $\ast$s, int $\ast$p)
+\begin{DoxyCompactList}\small\item\em To show the player\textquotesingle{}s name on the screen  str The variable that contains the player\textquotesingle{}s name  s The screen  p The mod of game (Play, Settings etc..) \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_a0bfe42309171a25c7b6c76b2b9c0d08d}{sauvegarder} (int score, char nomjoueur\mbox{[}$\,$\mbox{]}, char nomfichier\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em To save the player\textquotesingle{}s name and his score  score The score of the player  nomjoueur The player\textquotesingle{}s name  nomfichier The file\textquotesingle{}s name that containts the name and the score of the player. \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_aada813c0785b7f6febbb2a873e36f8a4}{meilleur} (char nomfichier\mbox{[}$\,$\mbox{]}, int $\ast$score, char nom\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em To save the player\textquotesingle{}s name and his score  score The score of the player  nom The player\textquotesingle{}s name  nomfichier The file\textquotesingle{}s name that containts the name and the score of the player. \end{DoxyCompactList}\item 
+void \hyperlink{minimap_8c_a119d2c3bdb0207ab52a9acfa840f6c97}{score\+\_\+player} (int $\ast$score, int t, int $\ast$Ti, \hyperlink{structtext}{text} sct, S\+D\+L\+\_\+\+Surface $\ast$s)
+\begin{DoxyCompactList}\small\item\em To modify the score of the player depending on the time and position of the player  score The score of the player  t Last time saved  Ti Time of the round  sct The text that contains the score of the player in the round  s The screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{minimap_8c_acf08282722be16a097227eb28f932104}\label{minimap_8c_acf08282722be16a097227eb28f932104}} 
+void {\bfseries A\+I\+\_\+\+Play\+\_\+\+Vs\+\_\+\+Computer} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Testing Program. 
+
+\begin{DoxyAuthor}{Author}
+Generation-\/Z Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Apr 19, 2022
+\end{DoxyDate}
+Testing program for minimap $\ast$ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{minimap_8c_a4e4834c816a2f591ef20dc58e7a3b45b}\label{minimap_8c_a4e4834c816a2f591ef20dc58e7a3b45b}} 
+\index{minimap.\+c@{minimap.\+c}!afficher@{afficher}}
+\index{afficher@{afficher}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void afficher (\begin{DoxyParamCaption}\item[{\hyperlink{structminimap}{minimap}}]{m,  }\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+To show the minimap on the screen  m the minimap  s the surface. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a3a314308c9bbdc8aaf2e8166983028c5}\label{minimap_8c_a3a314308c9bbdc8aaf2e8166983028c5}} 
+\index{minimap.\+c@{minimap.\+c}!Handle\+Input@{Handle\+Input}}
+\index{Handle\+Input@{Handle\+Input}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{Handle\+Input()}{HandleInput()}}
+{\footnotesize\ttfamily void Handle\+Input (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event}]{e,  }\item[{\hyperlink{structtext}{text} $\ast$}]{str,  }\item[{int $\ast$}]{p,  }\item[{\hyperlink{structtext}{text} $\ast$}]{fstr }\end{DoxyParamCaption})}
+
+
+
+To type the name of the player before the game  e The event  str The variable that contains the player\textquotesingle{}s name in window mod  p The mod of game (Play, Settings etc..)  fstr The variable that containts the player\textquotesingle{}s name in full screen. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a08368eea25194e149a4715e69a2766bf}\label{minimap_8c_a08368eea25194e149a4715e69a2766bf}} 
+\index{minimap.\+c@{minimap.\+c}!initminimap@{initminimap}}
+\index{initminimap@{initminimap}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{initminimap()}{initminimap()}}
+{\footnotesize\ttfamily void initminimap (\begin{DoxyParamCaption}\item[{\hyperlink{structminimap}{minimap} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+To initialize the minimap m . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the minimap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a1ebba30f85166270f80b1f29456addc1}\label{minimap_8c_a1ebba30f85166270f80b1f29456addc1}} 
+\index{minimap.\+c@{minimap.\+c}!Liberer@{Liberer}}
+\index{Liberer@{Liberer}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{Liberer()}{Liberer()}}
+{\footnotesize\ttfamily void Liberer (\begin{DoxyParamCaption}\item[{\hyperlink{structminimap}{minimap} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+To liberate the minimap once we close the game  m the minimap. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a77aa7e86d57acad18282831dfcfe6a17}\label{minimap_8c_a77aa7e86d57acad18282831dfcfe6a17}} 
+\index{minimap.\+c@{minimap.\+c}!M\+A\+J\+Minimap@{M\+A\+J\+Minimap}}
+\index{M\+A\+J\+Minimap@{M\+A\+J\+Minimap}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+J\+Minimap()}{MAJMinimap()}}
+{\footnotesize\ttfamily void M\+A\+J\+Minimap (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Joueur,  }\item[{\hyperlink{structminimap}{minimap} $\ast$}]{m,  }\item[{S\+D\+L\+\_\+\+Rect}]{camera,  }\item[{int}]{redimensionnement }\end{DoxyParamCaption})}
+
+
+
+To synchronize the movement of the player to the minimap icon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+Joueur} & the position of the player  m the minimap  camera the coordinates of the camera  redimensionnement the percentage of redimensioning \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_aada813c0785b7f6febbb2a873e36f8a4}\label{minimap_8c_aada813c0785b7f6febbb2a873e36f8a4}} 
+\index{minimap.\+c@{minimap.\+c}!meilleur@{meilleur}}
+\index{meilleur@{meilleur}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{meilleur()}{meilleur()}}
+{\footnotesize\ttfamily void meilleur (\begin{DoxyParamCaption}\item[{char}]{nomfichier\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{score,  }\item[{char}]{nom\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+To save the player\textquotesingle{}s name and his score  score The score of the player  nom The player\textquotesingle{}s name  nomfichier The file\textquotesingle{}s name that containts the name and the score of the player. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a0bfe42309171a25c7b6c76b2b9c0d08d}\label{minimap_8c_a0bfe42309171a25c7b6c76b2b9c0d08d}} 
+\index{minimap.\+c@{minimap.\+c}!sauvegarder@{sauvegarder}}
+\index{sauvegarder@{sauvegarder}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{sauvegarder()}{sauvegarder()}}
+{\footnotesize\ttfamily void sauvegarder (\begin{DoxyParamCaption}\item[{int}]{score,  }\item[{char}]{nomjoueur\mbox{[}$\,$\mbox{]},  }\item[{char}]{nomfichier\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+To save the player\textquotesingle{}s name and his score  score The score of the player  nomjoueur The player\textquotesingle{}s name  nomfichier The file\textquotesingle{}s name that containts the name and the score of the player. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a119d2c3bdb0207ab52a9acfa840f6c97}\label{minimap_8c_a119d2c3bdb0207ab52a9acfa840f6c97}} 
+\index{minimap.\+c@{minimap.\+c}!score\+\_\+player@{score\+\_\+player}}
+\index{score\+\_\+player@{score\+\_\+player}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{score\+\_\+player()}{score\_player()}}
+{\footnotesize\ttfamily void score\+\_\+player (\begin{DoxyParamCaption}\item[{int $\ast$}]{score,  }\item[{int}]{t,  }\item[{int $\ast$}]{Ti,  }\item[{\hyperlink{structtext}{text}}]{sct,  }\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+To modify the score of the player depending on the time and position of the player  score The score of the player  t Last time saved  Ti Time of the round  sct The text that contains the score of the player in the round  s The screen. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_af88b7e280acd64400d16b53053f054c2}\label{minimap_8c_af88b7e280acd64400d16b53053f054c2}} 
+\index{minimap.\+c@{minimap.\+c}!show\+Input@{show\+Input}}
+\index{show\+Input@{show\+Input}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{show\+Input()}{showInput()}}
+{\footnotesize\ttfamily void show\+Input (\begin{DoxyParamCaption}\item[{\hyperlink{structtext}{text}}]{str,  }\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{s,  }\item[{int $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+To show the player\textquotesingle{}s name on the screen  str The variable that contains the player\textquotesingle{}s name  s The screen  p The mod of game (Play, Settings etc..) 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_afa663e55163db2a2347b310b8471ab96}\label{minimap_8c_afa663e55163db2a2347b310b8471ab96}} 
+\index{minimap.\+c@{minimap.\+c}!time\+Enigme@{time\+Enigme}}
+\index{time\+Enigme@{time\+Enigme}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{time\+Enigme()}{timeEnigme()}}
+{\footnotesize\ttfamily void time\+Enigme (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{s }\end{DoxyParamCaption})}
+
+\paragraph*{This is the current clue about the Enigme process.}Uint32 t; char ti\mbox{[}3\mbox{]}, time\mbox{[}20\mbox{]}=\char`\"{}\+Time Remaining\+: \char`\"{};
+
+do\{ t = S\+D\+L\+\_\+\+Get\+Ticks(); sprintf(ti, \char`\"{}\%d\char`\"{}, 30-\/(t/1000)) //30 seconds. strcat(time, \char`\"{}(s)\char`\"{}); display\+Text(te, s, time); if(30 -\/ (t/1000) == 0)\{ Enigme.\+Done() = 1; display\+Text(te, s, \char`\"{}\+Time is U\+P!\char`\"{}); \} \}while(Enigme.\+Done() != 1) //\+How Engime.\+Done() function is going to work?\mbox{\Hypertarget{minimap_8c_a560674ed1aa4fbd8200cdd466f8be3fd}\label{minimap_8c_a560674ed1aa4fbd8200cdd466f8be3fd}} 
+\index{minimap.\+c@{minimap.\+c}!time\+Game@{time\+Game}}
+\index{time\+Game@{time\+Game}!minimap.\+c@{minimap.\+c}}
+\subsubsection{\texorpdfstring{time\+Game()}{timeGame()}}
+{\footnotesize\ttfamily int time\+Game (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{s,  }\item[{\hyperlink{structtext}{text}}]{te,  }\item[{int}]{t0 }\end{DoxyParamCaption})}
+
+
+
+To calculate the time of each round  s The screen  te The text of the time  t0 The time initial of every new round. 
+
+\begin{DoxyReturn}{Returns}
+t The time spent playing the round 
+\end{DoxyReturn}

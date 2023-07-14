@@ -1,0 +1,36 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+Testing Program.  
+
+
+{\ttfamily \#include \char`\"{}image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}texte.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}buttons.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}minimap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enigme.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+mixer.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a17c71e8de8c58645dd41431d716ac739}\label{main_8c_a17c71e8de8c58645dd41431d716ac739}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Testing Program. 
+
+\begin{DoxyAuthor}{Author}
+Generation-\/Z Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Apr 19, 2022
+\end{DoxyDate}
+Testing program for minimap $\ast$ 
